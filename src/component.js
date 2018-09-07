@@ -77,14 +77,14 @@ export default {
     },
 
     promptLabels: {
-      actionRemove:       'Are you sure you want to remove this event?',
+      actionRemove:       '确认移除此日程？',
       actionExclude:      'Are you sure you want to remove this event occurrence?',
-      actionCancel:       'Are you sure you want to cancel this event?',
-      actionUncancel:     'Are you sure you want to uncancel this event?',
-      actionSetStart:     'Are you sure you want to set this occurrence as the first?',
-      actionSetEnd:       'Are you sure you want to set this occurrence as the last?',
-      actionMove:         'Are you sure you want to move this event?',
-      actionInclude:      'Are you sure you want to add an event occurrence?',
+      actionCancel:       '确认取消此日程?',
+      actionUncancel:     '确认重新启用此日程?',
+      actionSetStart:     '确认将此日程设为第一个?',
+      actionSetEnd:       '确认将此日程设为最后一个?',
+      actionMove:         '确认移动此日程?',
+      actionInclude:      '确认添加到该日程?',
       move:               'Are you sure you want to move this event?',
       toggleAllDay:       'Are you sure you want to change whether this event occurs all day?',
       removeExistingTime: 'Are you sure you want to remove all event occurrences at this time?'

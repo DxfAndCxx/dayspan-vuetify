@@ -356,6 +356,7 @@ export default {
     summary()
     {
       let small = this.$vuetify.breakpoint.xs;
+      console.log(small);
 
       if (small)
       {

@@ -19,28 +19,28 @@ export default {
   dsCalendarApp: {
     allowsAddToday: true,
     types: [
-      {id: 'D', label: 'Day',     shortcut: 'D', type: Units.DAY,   size: 1,  focus: 0.4999, repeat: true,  listTimes: true,  updateRows: true,  schedule: false },
-      {id: 'W', label: 'Week',    shortcut: 'W', type: Units.WEEK,  size: 1,  focus: 0.4999, repeat: true,  listTimes: true,  updateRows: true,  schedule: false },
-      {id: 'M', label: 'Month',   shortcut: 'M', type: Units.MONTH, size: 1,  focus: 0.4999, repeat: true,  listTimes: false, updateRows: true,  schedule: false },
-      {id: 'Y', label: 'Year',    shortcut: 'Y', type: Units.YEAR,  size: 1,  focus: 0.4999, repeat: true,  listTimes: false, updateRows: true,  schedule: false },
-      {id: 'S', label: 'Schedule',shortcut: 'S', type: Units.DAY,   size: 92, focus: 0.0000, repeat: false, listTimes: false, updateRows: false, schedule: true },
-      {id: 'X', label: '4 days',  shortcut: 'X', type: Units.DAY,   size: 4,  focus: 0.4999, repeat: true,  listTimes: true,  updateRows: true,  schedule: false }
+      {id: 'D', label: '天', shortcut: 'D', type: Units.DAY,   size: 1,  focus: 0.4999, repeat: true,  listTimes: true,  updateRows: true,  schedule: false },
+      {id: 'W', label: '周', shortcut: 'W', type: Units.WEEK,  size: 1,  focus: 0.4999, repeat: true,  listTimes: true,  updateRows: true,  schedule: false },
+      {id: 'M', label: '月', shortcut: 'M', type: Units.MONTH, size: 1,  focus: 0.4999, repeat: true,  listTimes: false, updateRows: true,  schedule: false },
+      {id: 'Y', label: '年', shortcut: 'Y', type: Units.YEAR,  size: 1,  focus: 0.4999, repeat: true,  listTimes: false, updateRows: true,  schedule: false },
+      {id: 'S', label: '日程', shortcut: 'S', type: Units.DAY,   size: 92, focus: 0.0000, repeat: false, listTimes: false, updateRows: false, schedule: true },
+      {id: 'X', label: '4 天', shortcut: 'X', type: Units.DAY,   size: 4,  focus: 0.4999, repeat: true,  listTimes: true,  updateRows: true,  schedule: false }
     ],
     formats: {
-      today: 'dddd, MMMM D',
-      xs: 'MMM'
+      today: 'YYYY-MM-DD',
+      xs: 'YYYY 年 MM 月 DD 日'
     },
     labels: {
-      next: (type) => type ? 'Next ' + type.label.toLowerCase() : 'Next',
-      prev: (type) => type ? 'Previous ' + type.label.toLowerCase() : 'Previous',
-      moveCancel: 'Cancel move',
-      moveSingleEvent: 'Move event',
+      next: (type) => type ? '下 ' + type.label.toLowerCase() : '下',
+      prev: (type) => type ? '上 ' + type.label.toLowerCase() : '上',
+      moveCancel: '取消移动',
+      moveSingleEvent: '移动日程',
       moveOccurrence: 'Move just this event occurrence',
-      moveAll: 'Move all event occurrences',
-      moveDuplicate: 'Add event occurrence',
-      promptConfirm: 'Yes',
-      promptCancel: 'No',
-      today: 'TODAY',
+      moveAll: '移动所有日程',
+      moveDuplicate: '增加日程',
+      promptConfirm: '是',
+      promptCancel: '否',
+      today: '今日',
       todayIcon: 'today'
     },
     styles: {
@@ -75,15 +75,15 @@ export default {
       maxWidth: 500
     },
     formats: {
-      firstLine:  'ddd',
-      secondLine: 'MMM Do',
+      firstLine:  'dddd',
+      secondLine: 'YYYY-MM-DD',
       start:      'dddd, MMMM D',
-      time:       'h:mm a'
+      time:       'hh:mm'
     },
     labels: {
-      allDay:   'All day',
-      options:  'Options',
-      close:    'Close',
+      allDay:   '全天',
+      options:  '选项',
+      close:    '关闭',
       day:      ['day', 'days'],
       days:     ['day', 'days'],
       minute:   ['minute', 'minutes'],
@@ -126,9 +126,9 @@ export default {
       time:     'h:mm a'
     },
     labels: {
-      allDay:   'All day',
-      options:  'Options',
-      close:    'Close',
+      allDay:   '全天',
+      options:  '选项',
+      close:    '关闭',
       day:      ['day', 'days'],
       days:     ['day', 'days'],
       minute:   ['minute', 'minutes'],
@@ -137,8 +137,8 @@ export default {
       hours:    ['hour', 'hours'],
       week:     ['week', 'weeks'],
       weeks:    ['week', 'weeks'],
-      busy:     'Busy',
-      free:     'Free'
+      busy:     '忙',
+      free:     '空闲'
     }
   },
 
@@ -157,15 +157,15 @@ export default {
       time:     'h:mm a'
     },
     icons: {
-      save:     'save',
-      close:    'close',
-      edit:     'edit'
+      save:     '保存',
+      close:    '关闭',
+      edit:     '编辑'
     },
     labels: {
-      title:    'Add title',
-      allDay:   'All day',
-      close:    'Close',
-      save:     'Save',
+      title:    '增加标题',
+      allDay:   '全天',
+      close:    '关闭',
+      save:     '保存',
       day:      ['day', 'days'],
       days:     ['day', 'days'],
       minute:   ['minute', 'minutes'],
@@ -176,9 +176,9 @@ export default {
       weeks:    ['week', 'weeks'],
       busy:     'Busy',
       free:     'Free',
-      location: 'Add location',
-      description: 'Add description',
-      calendar: 'Calendar',
+      location: '增加地址',
+      description: '描述',
+      calendar: '日程',
     },
     busyOptions: [
       {value: true, text: 'Busy'},
@@ -229,7 +229,7 @@ export default {
   dsSchedule: {
     allowsRange: true,
     labels: {
-      editCustom:   'Edit'
+      editCustom:   '自定义'
     }
   },
 
@@ -245,23 +245,23 @@ export default {
     hasInclusions: true,
     hasCancelled: true,
     labels: {
-      cancel:       'Cancel event changes',
-      save:         'Save',
-      title:        'Title',
+      cancel:       '取消',
+      save:         '保存',
+      title:        '标题',
       exclusions:   'These are events or spans of time where a normally occurring event was excluded from the schedule. Events are excluded here if an event occurrence is moved.',
       inclusions:   'These are events or spans of time where events were added outside the normally occurring schedule. Events are added here if an event occurrence is moved.',
       cancelled:    'These are events or spans of time where events were cancelled.',
-      edit:         'Edit event',
-      add:          'Add event',
-      location:     'Add location',
-      description:  'Add description',
-      calendar:     'Calendar',
+      edit:         '编辑事件',
+      add:          '增加事件',
+      location:     '输入地址',
+      description:  '输入描述',
+      calendar:     '日程',
       tabs: {
-        details:    'Event Details',
-        forecast:   'Forecast',
-        removed:    'Removed',
-        added:      'Added',
-        cancelled:  'Cancelled'
+        details:    '日程详情',
+        forecast:   '预测',
+        removed:    '已移除',
+        added:      '已增加',
+        cancelled:  '已取消'
       }
     },
     busyOptions: [
@@ -280,14 +280,14 @@ export default {
     allowSetStart: true,
     allowSetEnd: true,
     labels: {
-      remove:     'Remove this event',
-      exclude:    'Remove this occurrence',
-      cancel:     'Cancel this occurrence',
+      remove:     '移除此日程',
+      exclude:    '移除当前事件',
+      cancel:     '取消当前事件',
       uncancel:   'Undo cancellation',
-      move:       'Move this occurrence',
-      include:    'Add new occurrence',
-      setStart:   'Set as first occurrence',
-      setEnd:     'Set as last occurrence'
+      move:       '移动此事件',
+      include:    '增加新事件',
+      setStart:   '设为第一个事件',
+      setEnd:     '设为最后一个事件'
     }
   },
 
@@ -378,8 +378,8 @@ export default {
 
   dsScheduleSpan: {
     labels: {
-      startless:  'Beginning of Time',
-      endless:    'End of Time'
+      startless:  '开始时间',
+      endless:    '结束时间'
     },
     formats: {
       start:      'MMMM Do, YYYY',

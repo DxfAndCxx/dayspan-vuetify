@@ -5,6 +5,7 @@
     <div class="ds-week-header mb-2">
 
       <div class="subtitle py-1 pl-2 ds-light-forecolor">
+        <!-- 左侧日历显示 -->
         {{ summary }}
       </div>
 
@@ -15,7 +16,8 @@
           class="ds-light-forecolor ma-0">
           <v-icon>keyboard_arrow_left</v-icon>
         </v-btn>
-        <span>Previous month</span>
+        <!-- TODO: 文字可配 -->
+        <span>上月</span>
 
       </v-tooltip>
 
@@ -26,7 +28,8 @@
           @click="next">
           <v-icon>keyboard_arrow_right</v-icon>
         </v-btn>
-        <span>Next month</span>
+        <!-- TODO: 文字可配 -->
+        <span>下月</span>
 
       </v-tooltip>
 
@@ -96,7 +99,7 @@ export default {
   computed:
   {
     summary()
-    {
+    { 
       return this.month ? this.month.summary(false, false, false, false) : '';
     }
   },
